@@ -22,7 +22,7 @@ USER app
 
 # download and configure solr
 ENV SOLR_VERSION=8.8.1
-RUN ./download-solr.sh $SOLR_VERSION &&
+RUN ./download-solr.sh $SOLR_VERSION && \
     ./configure_cores.sh $SOLR_VERSION nlibooks nliauth
 
 CMD ["solr-8.8.1/bin/solr", "start", "-f"]
