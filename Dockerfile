@@ -2,7 +2,7 @@ FROM ubuntu:latest
 
 # install deps
 RUN apt-get update && \
-    apt-get install -y openjdk-14-jre-headless wget
+    apt-get install --no-install-recommends -y openjdk-14-jre-headless wget
 
 # set up app user
 RUN mkdir -p /home/app
